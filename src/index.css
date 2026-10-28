@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+  --color-charcoal-950: #0f1012;
+  --color-charcoal-900: #141518;
+  --color-charcoal-800: #1a1b20;
+  --color-charcoal-700: #23252c;
+  --color-charcoal-600: #2d303a;
+  --color-charcoal-500: #424654;
+  --color-charcoal-400: #62677b;
+  --color-charcoal-300: #9398ab;
+  --color-charcoal-200: #c5c8d6;
+  --color-charcoal-100: #eef0f6;
+  --color-lavender-accent: #9d94ff;
+  --color-lavender-muted: #7c73db;
+  --color-lavender-subtle: #2b2848;
+}
+
+@layer base {
+  body {
+    background-color: #121316;
+    color: #e6e8ee;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    user-select: none;
+    overflow-x: hidden;
+  }
+}
+
+/* Caret blinking keyframe */
+@keyframes caret-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-caret {
+  animation: caret-blink 1s ease-in-out infinite;
+}
+
+/* Custom scrollbar if needed */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #27282f;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #373a44;
+}
+
