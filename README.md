@@ -105,22 +105,15 @@ npm run build
 
 ## Deploying to GitHub Pages (GitHub Actions)
 
-The production deployment workflow is provided in `deploy-workflow.yml`.
+This repository includes a production-ready GitHub Actions workflow at `.github/workflows/deploy.yml`.
 
 ### Quick Setup:
-1. **Push your code to GitHub from AI Studio**:
-   - Click **Try again** (or Export to GitHub in AI Studio). It will now push smoothly with zero permission errors.
-2. **Move the workflow file into `.github/workflows/`**:
-   - On GitHub.com, open `deploy-workflow.yml`.
-   - Click the pencil icon (Edit file).
-   - In the filename box at the top, rename `deploy-workflow.yml` to:
-     ```
-     .github/workflows/deploy.yml
-     ```
-   - Click **Commit changes**.
-3. **Enable GitHub Pages**:
-   - In your repository on GitHub, go to **Settings** > **Pages** (in the left sidebar).
+1. **Push your code to GitHub**:
+   - Push this repository to your GitHub account (make sure the GitHub App has workflow permissions if prompted).
+2. **Enable GitHub Actions for Pages**:
+   - In your repository on GitHub.com, go to **Settings** > **Pages** (in the left sidebar).
    - Under **Build and deployment** > **Source**, choose **GitHub Actions**.
-4. **Automatic Deployment**:
-   - The workflow will automatically test, build, and publish your site at `https://<your-username>.github.io/<your-repo-name>/`.
+3. **Automatic Deployment**:
+   - Every push to `main` will automatically run tests, build the bundle, and deploy to your GitHub Pages URL (`https://<your-username>.github.io/<your-repo-name>/`).
+   - You can also manually trigger a deployment from the **Actions** tab by choosing **Deploy to GitHub Pages** > **Run workflow**.
 
